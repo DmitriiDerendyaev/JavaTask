@@ -21,7 +21,9 @@ public class NewClass {
             return age;
         }
 
-        public abstract void display();
+        public void display(){
+            System.out.printf("Name: %s, Age: %d", name, age);
+        }
 
     }
 
