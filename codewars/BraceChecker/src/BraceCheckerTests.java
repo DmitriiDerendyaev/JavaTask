@@ -15,4 +15,15 @@ public class BraceCheckerTests {
         assertEquals(false, checker.isValid("[(])"));
     }
 
+//    @Test
+//    public void testEmoValid() {
+//        assertEquals(false, checker.isValid("\uD83D\uDC49\uD83C\uDFFB\uD83D\uDC49\uD83C\uDFFB\uD83D\uDC48\uD83C\uDFFB\uD83D\uDC48\uD83C\uDFFB"));
+//    }
+//    @Test
+//    public void testEmoInValid() {
+//        assertEquals(true, checker.isValid("👉👈"));
+//    }
+
+
+
 }
