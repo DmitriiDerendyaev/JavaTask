@@ -35,7 +35,7 @@ public class TelegramBotMe extends TelegramLongPollingBot {
 
         var response = new SendMessage();
         response.setChatId(originalMessage.getChatId().toString());
-        response.setText("Hello, everyone!");
+        response.setText(originalMessage.getText());
         sendAnswerMessage(response);
     }
 
