@@ -2,7 +2,7 @@ class Item{
     private int weight;
     private int value;
 
-    public Item(int value, int weight) {
+    public Item( int weight, int value) {
         this.value = value;
         this.weight = weight;
     }
