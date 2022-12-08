@@ -9,7 +9,7 @@ public class FractionalKnapsack {
 
         final Item[] items = {item1, item2, item3};
 
-        Arrays.sort(items, Comparator.comparingDouble(Item::valuePerUnitOfWeight));//quickSort by unit value
+        Arrays.sort(items, Comparator.comparingDouble(Item::valuePerUnitOfWeight).reversed());//quickSort by unit value
 
         System.out.println(Arrays.toString(items));
 
@@ -24,8 +24,8 @@ public class FractionalKnapsack {
                 valueSoFar += items[currentItem].getValue();
                 weightSoFar += items[currentItem].getWeight();
             } else{
-                valueSoFar += ((maxWeight - weightSoFar) / (double)items[currentItem].getValue()) *
-                        items[currentItem].getWeight();
+                valueSoFar += ((maxWeight - weightSoFar) / (double)items[currentItem].getWeight()) *
+                        items[currentItem].getValue();
 
                 weightSoFar = maxWeight;
             }
