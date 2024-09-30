@@ -5,11 +5,9 @@ import java.util.regex.Pattern;
 public class Kata {
 
     public static List<Object> filterList(final List<Object> list) {
-        Set<Object> filteredSet = new HashSet<Object>();
-        Pattern pattern = Pattern.compile("^\\d+\\b");
+        Set<Object> filteredSet = new HashSet<>();
         for (Object o : list) {
-            Matcher matcher = pattern.matcher(o.toString());
-            if (matcher.find()) {
+            if (o instanceof Integer) {
                 filteredSet.add(o);
             }
         }
