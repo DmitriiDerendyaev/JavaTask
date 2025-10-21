@@ -20,6 +20,7 @@ public class StreamTask2 {
         Arrays.stream(values)
                 .map(m -> m * 1.1)
                 .filter(n -> n > 4.0)
+                .boxed()
                 .sorted(Comparator.reverseOrder())
                 .forEach(n -> System.out.println(String.format("%.2f", n)));
 
